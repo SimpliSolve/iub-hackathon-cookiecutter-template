@@ -1,6 +1,10 @@
 # IUB Hackathon Cookiecutter Template
 
-#### Instruction to run the code
+#### Instruction to run the training code
 ```
-bash run.sh
+bash train.sh
+```
+#### Instruction to run the inference code
+```
+bash test.sh
 ```
