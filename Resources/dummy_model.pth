@@ -1,0 +1,3 @@
+# This is just an empty placeholder file to simulate a model weight
+with open("Resources/dummy_model.pth", "wb") as f:
+    f.write(b"")  # empty bytes

@@ -1,0 +1,3 @@
+[1] Author A. Title A. Journal A. 2025.
+[2] Author B. Title B. Conference B. 2024.
+[3] Author C. Title C. Workshop C. 2023.

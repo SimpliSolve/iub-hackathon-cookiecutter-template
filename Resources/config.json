@@ -1,0 +1,8 @@
+{
+  "data_path": "Dataset/sample_data.csv",
+  "preprocessed_data_path": "output/preprocessed",
+  "model_params": {
+    "layers": 2,
+    "hidden_size": 128
+  }
+}
