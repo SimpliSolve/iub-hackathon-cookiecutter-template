@@ -1,6 +1,7 @@
 ##################### Initialization of pipeline starts #####################
 #-----------------------------general imports-------------------------------#
 import os
+import pandas as pd
 import json
 import time
 from datetime import datetime
@@ -32,13 +33,13 @@ if __name__ == "__main__":
     pipeline_start = time.time()
     print("===== Competition Pipeline Started =====\n")
 
-    output_handler = OutputHandler()
+    output_handler = OutputHandler(os, datetime)
 
-    track_step("Data Preprocessing", lambda: PreprocessData())
-    track_step("Model Building", lambda: BuildModel())
-    track_step("Performance Evaluation", lambda: Performance().evaluate())
-    track_step("Inference", lambda: Infer(output_handler).run())
-
+    track_step("Data Preprocessing", lambda: PreprocessData(os, json, pd, ResourceManager))
+    track_step("Model Building", lambda: BuildModel(os, ResourceManager))
+    track_step("Performance Evaluation", lambda: Performance(os, json).evaluate())
+    track_step("Inference", lambda: Infer(output_handler, os, datetime, ResourceManager).run())
+    
     print("===== Pipeline Finished Successfully =====")
     print(f"Total Execution Time: {time.time() - pipeline_start:.2f} seconds")
 ###################### Pipeline execution flow ends #########################

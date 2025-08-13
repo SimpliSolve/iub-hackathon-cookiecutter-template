@@ -4,8 +4,8 @@ class Infer:
         self.os = os
         self.datetime = datetime
 
-        # Initialize ResourceManager
-        self.resource_manager = ResourceManager()
+        # Initialize ResourceManager with required modules
+        self.resource_manager = ResourceManager(os, __import__('json'), __import__('pandas'))
         print("[Inference] Inference activated")
 
     def run(self):

@@ -2,8 +2,8 @@ class BuildModel:
     def __init__(self, os, ResourceManager):
         print("[Modeling] Model building activated")
 
-        # Initialize ResourceManager
-        self.resource_manager = ResourceManager()
+        # Initialize ResourceManager with modules
+        self.resource_manager = ResourceManager(os, __import__('json'), __import__('pandas'))
 
         # Load config and model path
         self.config = self.resource_manager.get_config()

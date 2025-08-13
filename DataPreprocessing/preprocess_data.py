@@ -2,8 +2,8 @@ class PreprocessData:
     def __init__(self, os, json, pd, ResourceManager):
         print("[DataPreprocessing] Data preprocessing activated")
 
-        # Initialize ResourceManager
-        self.resource_manager = ResourceManager()
+        # Initialize ResourceManager with modules
+        self.resource_manager = ResourceManager(os, json, pd)
 
         # Load config
         self.config = self.resource_manager.get_config()
@@ -20,4 +20,3 @@ class PreprocessData:
 
     def run_preprocessing(self):
         print("[DataPreprocessing] Running dummy preprocessing")
-        # Here you could add data cleaning, feature engineering, etc.
